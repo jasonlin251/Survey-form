@@ -1,0 +1,169 @@
+** start of undefined **
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <form id="survey-form">
+       <h1 id="title">Survey Form</h1>
+    <p class="interest" id="description">Please fill out this form with the required information</p>
+      <fieldset>
+        <label for="name" id="name-label">Enter Your Full Name: <input id="name" name="name" type="text" placeholder="your full name" required /></label>
+        <label for="email" id="email-label">Enter Your Email: <input id="email" name="email" type="email" id="email" placeholder="abcd123@xxx.com" required /></label>
+        <label for="age" id="number-label">Your age: <input id="number" name="age" type="number" min="13" max="100" placeholder="13-100" /></label>
+        <label for="role" id="role-label"> Describe your role
+          <select id="dropdown" name="role">
+            <option value="">(select one)</option>
+            <option value="1">Full-time worker</option>
+            <option value="2">Part-time worker</option>
+            <option value="3">Undergraduates</option>
+            <option value="4">Prefer not to say</option>
+            <option value="5">Others</option>
+          </select> 
+        </label>
+      </fieldset>
+      <filedset>
+        <legend>Where did u hear us from</legend>
+        <label for="media" id="media-label"><input id="media" type="radio" name="refer" class="inline" value="6" checked /> Social Media</label>
+        <label for="advertisement" id="advertisement-label"><input id="advertisement" type="radio" name="refer" class="inline" value="7" /> Advertisement</label>
+        <label for="friends" id="friends-label"><input id="friends" type="radio" name="refer" class="inline" value="8" /> Friends</label>
+        <label for="browsers" id="browers-label"><input id="browers" type="radio" name="refer" class="inline" value="9" /> Browsers</label>
+      </fieldset> 
+      <fieldset class="recommend">
+        <legend>Would you recommend this to your friend</legend>
+        <label for="definitely"><input type="radio" class="inline" id="definitely" name="friend1" value="10" checked> Definitely</label>
+        <label for="most-likely"><input type="radio" class="inline" id="most-likely" name="friend1" value="11"> Most likely</label>
+        <label for="maybe"><input type="radio" class="inline" id="maybe" name="friend1" value="12"> Maybe</label>
+        <label for="not-sure"><input type="radio" class="inline" id="not-sure" name="friend1" value="13"> Not sure</label>
+        <label for="not-to-answer"><input type="radio" class="inline" id="not-to-answer" name="friend1" value="14"> prefer not to answer</label>
+      </fieldset>
+    <fieldset>
+      <legend >What is your favorite coding language or area of interest?</legend>
+      <label for="html"><input type="checkbox" class="inline" id="check1" name="html" value="something"> HTML</label>
+      <label for="javascript"><input type="checkbox" class="inline"  id="check2" name="javasript" value="javascript" >JAVASCRIPT</label>
+      <label for="python"><input type="checkbox" class="inline" id="check3" name="pyhton" value="python"> PYTHON</label>
+      <label for="back-end"><input type="checkbox" class="inline" id="check4" name="back-end" value="back-end"> Back-End</label>
+      <label for="front-end"><input type="checkbox" class="inline" id="check5" name="front-end" value="front-end"> Front-End</label>
+      <label for="software"><input type="checkbox" class="inline" id="check6" name="software" value="software"> Software</label>
+      <label for="webpage"><input type="checkbox" class="inline" id="check7" name="webpage" value="webpage"> Webpage</label>
+      <label for="machine-learning"><input type="checkbox" class="inline" id="check8" name="machine-learning" value="machine-learning"> Machine Learning</label>
+      <label for="cloud-computing"><input type="checkbox" class="inline" id="check9" name="cloud-computing" value="cloud-computing"> Cloud Computing</label>
+      <label for="others"><input type="checkbox" class="inline" id="check10" name="others" value="others"> Others</label>
+    </fieldset>
+   <label for="bio">Breifly introduce yourself and pursued future career
+          <textarea id="bio" name="bio" rows="3" cols="30" placeholder="I would like to become a front-end developer..."></textarea>
+        </label>
+      </fieldset>
+<input class="submit" type="submit" value="Submit" id="submit" />
+    </form>
+  </body>
+  </html>
+
+** end of undefined **
+
+** start of undefined **
+
+body {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    background-color: #1b1b32;
+    color: #f5f6f7;
+    font-family: Tahoma;
+    font-size: 16px;
+  }
+  
+  h1, p {
+    margin: 1em auto;
+    text-align: center;
+  }
+  
+  form {
+    width: 60vw;
+    max-width: 500px;
+    min-width: 300px;
+    margin: 0 auto;
+    padding-bottom: 2em;
+  }
+  
+  fieldset {
+    border: none;
+    padding: 2rem 0;
+    border-bottom: 3px solid #3b3b4f;
+  }
+  
+  fieldset:last-of-type {
+    border-bottom: none;
+  }
+  
+  label {
+    display: block;
+    margin: 0.5rem 0;
+  }
+  
+  input,
+  textarea,
+  select {
+    margin: 10px 0 0 0;
+    width: 100%;
+    min-height: 2em;
+  }
+  
+  input, textarea, #role{
+    background-color: #0a0a23;
+    border: 1px solid #0a0a23;
+    color: #ffffff;
+  }
+  
+  .inline {
+    width: unset;
+    margin: 0 0.5em 0 0;
+    vertical-align: middle;
+  }
+  
+  input[type="submit"] {
+    display: block;
+    width: 60%;
+    margin: 1em auto;
+    height: 2em;
+    font-size: 1.1rem;
+    background-color: #00FF00;
+    border-color: white;
+    min-width: 300px;
+  }
+  
+  input[type="file"] {
+    padding: 1px 2px;
+  }
+  
+  .inline{
+    display: inline; 
+  }
+  body {
+  background-image: url('https://plus.unsplash.com/premium_photo-1661964187664-e26f70e1a224?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y29kaW5nJTIwYmFja2dyb3VuZHxlbnwwfHwwfHx8MA%3D%3D');
+}
+
+.recommend{
+  border: none;
+  border: none;
+    padding: 2rem 0;
+    border-bottom: none;
+    margin: 10px 0 0 0;
+    width: 100%;
+  }
+
+  body{
+    margin:0;
+    padding: 0;
+    line-height: 1;
+  }
+input{
+  cursor: pointer !important;
+}
+
+** end of undefined **
+
